@@ -10,7 +10,7 @@ export default function OrderDetails() {
     api.get(`/orders/${id}`).then((res) => setOrder(res.data));
   }, [id]);
 
-  if (!order) return <div className="page">Loading...</div>;
+  if (!order) return <div className="page order-details-page">Loading...</div>;
 
   return (
     <div className="page">

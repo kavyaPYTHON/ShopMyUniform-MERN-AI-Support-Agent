@@ -13,7 +13,7 @@ export default function MyOrders() {
     });
   }, []);
 
-  if (loading) return <div className="page">Loading...</div>;
+  if (loading) return <div className="page orders-page">Loading...</div>;
 
   return (
     <div className="page">

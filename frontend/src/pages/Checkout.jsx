@@ -29,7 +29,7 @@ export default function Checkout() {
   };
 
   return (
-    <div className="page form-page">
+    <div className="page form-page checkout-page">
       <h2>Checkout</h2>
       <div className="checkout-summary">
         {cart.map((i) => (

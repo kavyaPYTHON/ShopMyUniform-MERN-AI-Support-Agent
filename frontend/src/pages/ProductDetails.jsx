@@ -25,7 +25,7 @@ export default function ProductDetails() {
   };
 
   return (
-    <div className="page product-details">
+    <div className="page product-details product-details-page">
       <h2>{product.name}</h2>
       <p className="muted">{product.category} • {product.color} • {product.gender}</p>
       <p className="price">₹{product.price}</p>

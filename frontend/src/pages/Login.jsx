@@ -21,15 +21,32 @@ export default function Login() {
   };
 
   return (
-    <div className="page form-page">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        {error && <p className="error">{error}</p>}
-        <button type="submit" className="btn">Login</button>
-      </form>
-      <p>Don't have an account? <Link to="/register">Register</Link></p>
-    </div>
+    <main className="page auth-page login-page">
+      <div className="auth-orbit orbit-one" /><div className="auth-orbit orbit-two" />
+      <span className="floating-uniform uniform-shirt" aria-hidden="true">👕</span>
+      <span className="floating-uniform uniform-tie" aria-hidden="true">👔</span>
+      <span className="floating-uniform uniform-bag" aria-hidden="true">🎒</span>
+      <section className="auth-card login-card">
+        <div className="auth-art login-art">
+          <span className="art-spark spark-a">✦</span><span className="art-spark spark-b">✧</span>
+          <div className="art-circle"><span>👕</span><span>👔</span><span>🎒</span></div>
+          <p className="art-kicker">THE SCHOOL STYLE STORE</p>
+          <h2>Ready for a<br /><em>great school day?</em></h2>
+          <p className="art-copy">Your school essentials, all in one happy place.</p>
+        </div>
+        <div className="auth-content">
+          <div className="auth-eyebrow">WELCOME BACK</div>
+          <h1>Login</h1>
+          <p className="auth-subtitle">Sign in to continue your uniform shopping.</p>
+          <form onSubmit={handleSubmit} className="form auth-form">
+            <label>Email address<input type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required /></label>
+            <label>Password<input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} required /></label>
+            {error && <p className="error">{error}</p>}
+            <button type="submit" className="btn auth-submit">Login to your account <span>→</span></button>
+          </form>
+          <p className="auth-switch">New to ShopMyUniform? <Link to="/register">Create an account</Link></p>
+        </div>
+      </section>
+    </main>
   );
 }

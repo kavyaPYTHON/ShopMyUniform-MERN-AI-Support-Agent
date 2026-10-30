@@ -22,7 +22,7 @@ export default function Profile() {
   if (!profile) return <div className="page">Loading...</div>;
 
   return (
-    <div className="page form-page">
+    <div className="page form-page profile-page">
       <h2>My Profile</h2>
       <form onSubmit={handleSave} className="form">
         <label>Name</label>
